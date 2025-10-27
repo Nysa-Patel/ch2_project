@@ -1,9 +1,10 @@
 from datetime import datetime
+user_answer='1'
 tasks = []
 
-print("To do list: Enter 3 tasks that are currently on your mind")
+print("To do list: ")
 #asks user for 3 tasks
-for i in range (3):
+while(user_answer =='1'):
     task = input("\nEnter task: ")
     priority = input("Is this Urgent, Important, Somewhat Important, Can Wait, or Does not Matter for Now: ")
     duedate = input("When will this task be due (YYYY-MM-DD): ")
@@ -20,7 +21,9 @@ for i in range (3):
     elif priority == 'Does not Matter for Now':
         priorityval = 5
     tasks.append((task, priorityval, duedate))
-
+    user_answer = input("Do you want to enter in another input? 1 for yes 2 for no: ")
+    if user_answer == '2':
+        break
 
 tasks.sort(key= lambda x: (x[2], x[1]))
 
@@ -38,7 +41,9 @@ for task, priorityval, date in tasks:
         priority = "Does not Matter for Now"
 
     #output
-    print("- {task}, priority: {priority} (due {date.strftime('%Y-%m-%d')})")
+    print(f"- {task}, priority: {priority} (due {date.strftime('%Y-%m-%d')})")
+
+
 
 
 
