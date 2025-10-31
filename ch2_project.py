@@ -61,6 +61,7 @@ while(user_answer =='1'):
 cursor.execute("SELECT task, priority, priorityval, duedate FROM tasks ORDER BY duedate, priorityval")
 tasks = cursor.fetchall()
 
+
 print('\nSorted! Order for your tasks: ')
 for task, priority, priorityval, date in tasks:
     if priorityval == 1:
