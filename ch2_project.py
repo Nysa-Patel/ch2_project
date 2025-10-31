@@ -1,3 +1,8 @@
+#Name: Nysa Patel
+#Date: 10/31/25
+#Class: 2B Computer Science- Scimeca
+#Project: Chapter 2 project
+
 import sqlite3
 from datetime import datetime
 
