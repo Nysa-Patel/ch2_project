@@ -77,12 +77,3 @@ for task, priority, priorityval, date in tasks:
     #output
     print(f"- {task}, priority: {priority} (due {date})")
 conn.close()
-
-
-
-
-
-
-
-
-
